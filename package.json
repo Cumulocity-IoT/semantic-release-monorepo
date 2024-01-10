@@ -1,6 +1,6 @@
 {
   "name": "semantic-release-monorepo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Semantic release plugin for multilingual mono repository",
   "main": "index.js",
   "scripts": {

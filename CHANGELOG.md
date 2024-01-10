@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/SoftwareAG/semantic-release-monorepo/compare/v1.0.0...v1.0.1) (2024-01-10)
+
+
+### Bug Fixes
+
+* Fix integration error ([6f4ef68](https://github.com/SoftwareAG/semantic-release-monorepo/commit/6f4ef68f770cc0f548fc1a7780c4e99b7a0543ac))
+
 # 1.0.0 (2024-01-10)
 
 
