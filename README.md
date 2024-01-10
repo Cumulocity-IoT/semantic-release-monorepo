@@ -10,7 +10,7 @@ A semantic-release plugin to update version for multi-lingual mono repository st
 ## Install
 
 ```bash
-$ npm install https://github.com/SoftwareAG/semantic-release-monorepo/archive/v1.0.0.tar.gz  -D
+$ npm install https://github.com/SoftwareAG/semantic-release-monorepo/releases/download/v1.0.0/semantic-release-monorepo-1.0.0.tgz  -D
 ```
 
 ## Usage
