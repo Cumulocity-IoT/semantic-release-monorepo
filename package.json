@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.softwareag.com:IOTA/semantic-release-monorepo.git"
+    "url": "https://github.com/SoftwareAG/semantic-release-monorepo.git"
   },
   "keywords": [
     "monorepo",
     "semantic-release"
   ],
   "author": "lra",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "dependencies": {
     "@semantic-release/error": "^3.0.0",
     "aggregate-error": "^3.1.0",
@@ -34,6 +34,9 @@
     "semantic-release": "^22.0.12",
     "stream-buffers": "^3.0.2",
     "tempy": "^3.1.0"
+  },
+  "peerDependencies": {
+    "semantic-release": ">=22.0.12"
   },
   "type": "module",
   "files": [
@@ -53,5 +56,8 @@
     "ignore": [
       "**/**/*.md"
     ]
+  },
+  "engines": {
+    "node": ">=18.18.2"
   }
 }
