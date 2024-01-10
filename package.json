@@ -1,0 +1,57 @@
+{
+  "name": "semantic-release-monorepo",
+  "version": "1.0.0",
+  "description": "Semantic release plugin for multilingual mono repository",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "release": "semantic-release --debug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.softwareag.com:IOTA/semantic-release-monorepo.git"
+  },
+  "keywords": [
+    "monorepo",
+    "semantic-release"
+  ],
+  "author": "lra",
+  "license": "MIT",
+  "dependencies": {
+    "@semantic-release/error": "^3.0.0",
+    "aggregate-error": "^3.1.0",
+    "execa": "^5.1.1",
+    "fs-extra": "^11.2.0",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.6",
+    "fast-xml-parser": "^4.3.2",
+    "jest": "^29.7.0",
+    "prettier": "3.1.1",
+    "semantic-release": "^22.0.12",
+    "stream-buffers": "^3.0.2",
+    "tempy": "^3.1.0"
+  },
+  "type": "module",
+  "files": [
+    "index.js",
+    "lib"
+  ],
+  "jest": {
+    "transform": {},
+    "testMatch": [
+      "**/test/**/*.test.js"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 100,
+    "trailingComma": "none",
+    "ignore": [
+      "**/**/*.md"
+    ]
+  }
+}
