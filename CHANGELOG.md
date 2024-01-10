@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/SoftwareAG/semantic-release-monorepo/compare/v1.0.2...v1.0.3) (2024-01-10)
+
+
+### Bug Fixes
+
+* Refactor default export method ([ba70774](https://github.com/SoftwareAG/semantic-release-monorepo/commit/ba707745ad3108a35386b3cee33a02ce4b43fb75))
+
 ## [1.0.2](https://github.com/SoftwareAG/semantic-release-monorepo/compare/v1.0.1...v1.0.2) (2024-01-10)
 
 
