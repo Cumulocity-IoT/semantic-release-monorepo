@@ -99,7 +99,7 @@ The `pluginConfig` when semantic release is run from `webapp` project
 **Important** : If the main project is maven, ensure to install semantic-release and other plugins globally.
 
 ```bash
-$ npm install -g semantic-release https://github.softwareag.com/IOTA/semantic-release-monorepo/archive/v1.0.0.tar.gz
+$ npm install -g semantic-release https://github.com/SoftwareAG/semantic-release-monorepo/releases/download/v1.0.0/semantic-release-monorepo-1.0.0.tgz
 ```
 
 For the project structure as below, add the semantic-release configuration file and run semantic-release from the project root folder
