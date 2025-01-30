@@ -84,4 +84,24 @@ describe('prepare', () => {
     },
     testTimeout
   );
+
+  test(
+    'should update version when the main package is yarn berry project',
+    async () => {
+      const cwd = temporaryDirectory();
+      console.log(cwd);
+      await copyFixturesToTempDir('./test/fixtures/prepare-test-04', cwd);
+      const pluginConfig = { type: 'yarn-berry' };
+      await preparePackage(pluginConfig, {
+        nextRelease: { version },
+        logger: loggerMock,
+        cwd,
+        stderr,
+        stdout,
+        env
+      });
+      expect(await getVersion('yarn-berry', `${cwd}/package.json`)).toBe(version);
+    },
+    testTimeout
+  );
 });

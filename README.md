@@ -33,7 +33,7 @@ The plugin can be configured in the [**semantic-release** configuration file](ht
 
 | Options   | Description                                                                                                                                                                                                                 | Default |
 | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| `type`    | Package manager type for the project. Supported types: `yarn`, `npm`, `maven`                                                                                                                                               | `yarn`  |
+| `type`    | Package manager type for the project. Supported types: `yarn`, `npm`, `maven`, `yarn-berry`                                                                                                                                 | `yarn`  |
 | `pkgRoot` | **Mandatory**. Project root folder. Can be absolute or relative to the main project. <br/> **Note**: The `pkgRoot` directory must contain a `package.json` for `yarn` or `npm` project and a `pom.xml` for `maven` project. |         |
 
 ### Supported package types
@@ -128,5 +128,13 @@ the `pluginConfiguration` in release.config.js is
             "type": "maven"
         }
     ]
+}
+```
+
+For projects with `yarn >1.22.22`, use the type `yarn-berry`
+
+```json
+{
+  "type": "yarn-berry"
 }
 ```

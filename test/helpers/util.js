@@ -12,6 +12,7 @@ export const getVersion = async (type, filePath) => {
   switch (type) {
     case 'yarn':
     case 'npm':
+    case 'yarn-berry':
       const packageJson = JSON.parse(fileContent);
       version = packageJson.version;
       break;
