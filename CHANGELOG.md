@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/SoftwareAG/semantic-release-monorepo/compare/v1.0.3...v1.1.0) (2025-01-30)
+
+
+### Features
+
+* Add support for yarn berry ([095b40e](https://github.com/SoftwareAG/semantic-release-monorepo/commit/095b40e97c336006757c78da394f8fe971180612))
+
 ## [1.0.3](https://github.com/SoftwareAG/semantic-release-monorepo/compare/v1.0.2...v1.0.3) (2024-01-10)
 
 
