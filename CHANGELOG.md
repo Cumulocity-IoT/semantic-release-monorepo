@@ -5,6 +5,13 @@
 
 * Support maven custom property for versioning ([44a1a03](https://github.com/SoftwareAG/semantic-release-monorepo/commit/44a1a03d26cb4b8842e35f80225dc604b6033084))
 
+# [1.2.0](https://github.com/SoftwareAG/semantic-release-monorepo/compare/v1.1.0...v1.2.0) (2025-05-19)
+
+
+### Features
+
+* Support maven custom property for versioning ([44a1a03](https://github.com/SoftwareAG/semantic-release-monorepo/commit/44a1a03d26cb4b8842e35f80225dc604b6033084))
+
 # [1.1.0](https://github.com/SoftwareAG/semantic-release-monorepo/compare/v1.0.3...v1.1.0) (2025-01-30)
 
 
