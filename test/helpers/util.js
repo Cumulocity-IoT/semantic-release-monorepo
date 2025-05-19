@@ -24,3 +24,13 @@ export const getVersion = async (type, filePath) => {
   }
   return version;
 };
+
+export const getMavenPropertyValue = async (filePath, propertyName) => {
+  const fileContent = await fsPromises.readFile(filePath, 'utf8');
+  const parser = new XMLParser();
+  const pomJson = parser.parse(fileContent);
+  const properties = pomJson.project.properties;
+  if (properties && properties[propertyName]) {
+    return properties[propertyName];
+  }
+};

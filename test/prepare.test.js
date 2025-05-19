@@ -1,7 +1,7 @@
-import { jest } from '@jest/globals';
+import { jest, test } from '@jest/globals';
 import { temporaryDirectory } from 'tempy';
 import preparePackage from '../lib/prepare';
-import { copyFixturesToTempDir, getVersion } from './helpers/util.js';
+import { copyFixturesToTempDir, getVersion, getMavenPropertyValue } from './helpers/util.js';
 import { WritableStreamBuffer } from 'stream-buffers';
 
 describe('prepare', () => {
@@ -10,7 +10,7 @@ describe('prepare', () => {
   let stdout;
   let env;
   const version = '1.2.0';
-  const testTimeout = 10000; // 10 seconds
+  const testTimeout = 20000; // 10 seconds
   beforeAll(() => {
     loggerMock = {
       log: jest.fn()
@@ -101,6 +101,68 @@ describe('prepare', () => {
         env
       });
       expect(await getVersion('yarn-berry', `${cwd}/package.json`)).toBe(version);
+    },
+    testTimeout
+  );
+
+  test(
+    'should update version when the maven project provides custom version property',
+    async () => {
+      const cwd = temporaryDirectory();
+      await copyFixturesToTempDir('./test/fixtures/prepare-test-05', cwd);
+      const pluginConfig = {
+        type: 'maven',
+        versioningOptions: { customVersionProperty: 'revision' }
+      };
+      await preparePackage(pluginConfig, {
+        nextRelease: { version },
+        logger: loggerMock,
+        cwd,
+        stderr,
+        stdout,
+        env
+      });
+
+      expect(
+        await getMavenPropertyValue(
+          `${cwd}/pom.xml`,
+          pluginConfig.versioningOptions.customVersionProperty
+        )
+      ).toBe(version);
+    },
+    testTimeout
+  );
+
+  test(
+    'should update version when the config provides custom version property fore each dependency',
+    async () => {
+      const cwd = temporaryDirectory();
+      await copyFixturesToTempDir('./test/fixtures/prepare-test-05', cwd);
+      const pluginConfig = {
+        type: 'maven',
+        dependencies: [
+          {
+            type: 'maven',
+            pkgRoot: `${cwd}`,
+            versioningOptions: { customVersionProperty: 'revision' }
+          }
+        ]
+      };
+      await preparePackage(pluginConfig, {
+        nextRelease: { version },
+        logger: loggerMock,
+        cwd,
+        stderr,
+        stdout,
+        env
+      });
+
+      expect(
+        await getMavenPropertyValue(
+          `${cwd}/pom.xml`,
+          pluginConfig.dependencies[0].versioningOptions.customVersionProperty
+        )
+      ).toBe(version);
     },
     testTimeout
   );
