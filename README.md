@@ -10,7 +10,7 @@ A semantic-release plugin to update version for multi-lingual mono repository st
 ## Install
 
 ```bash
-$ npm install https://github.com/SoftwareAG/semantic-release-monorepo/releases/download/v1.0.3/semantic-release-monorepo-1.0.3.tgz  -D
+$ npm install https://github.com/SoftwareAG/semantic-release-monorepo/releases/download/v1.2.0/semantic-release-monorepo-1.2.0.tgz  -D
 ```
 
 ## Usage
@@ -99,7 +99,7 @@ The `pluginConfig` when semantic release is run from `webapp` project
 **Important** : If the main project is maven, ensure to install semantic-release and other plugins globally.
 
 ```bash
-$ npm install -g semantic-release https://github.com/SoftwareAG/semantic-release-monorepo/releases/download/v1.0.3/semantic-release-monorepo-1.0.3.tgz
+$ npm install -g semantic-release https://github.com/SoftwareAG/semantic-release-monorepo/releases/download/v1.2.0/semantic-release-monorepo-1.2.0.tgz
 ```
 
 For the project structure as below, add the semantic-release configuration file and run semantic-release from the project root folder
@@ -128,6 +128,34 @@ the `pluginConfiguration` in release.config.js is
             "type": "maven"
         }
     ]
+}
+```
+
+For projects that use CI-friendly versions (where the version in pom.xml is like ${revision}), to update the property rather than the version directly, use the configuration
+
+```json
+{
+  "type": "maven",
+  "versioningOptions": {
+    "customVersionProperty": "revision"
+  }
+}
+```
+
+For monorepo configuration where dependencies are specified, use the configuration as
+
+```json
+{
+  "type": "maven",
+  "dependencies": [
+    {
+      "type": "maven",
+      "pkgRoot": "..",
+      "versioningOptions": {
+        "customVersionProperty": "revision"
+      }
+    }
+  ]
 }
 ```
 
