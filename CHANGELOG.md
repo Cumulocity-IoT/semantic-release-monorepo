@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/SoftwareAG/semantic-release-monorepo/compare/v1.2.0...v1.2.1) (2025-05-30)
+
+
+### Bug Fixes
+
+* Place the versions subcommand in the args list ([32446a5](https://github.com/SoftwareAG/semantic-release-monorepo/commit/32446a5d9ef161b25bc13496a76d8abce64a2d9f))
+
 # [1.2.0](https://github.com/SoftwareAG/semantic-release-monorepo/compare/v1.1.0...v1.2.0) (2025-05-27)
 
 
