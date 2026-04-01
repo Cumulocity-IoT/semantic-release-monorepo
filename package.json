@@ -61,6 +61,7 @@
     "node": ">=18.18.2"
   },
   "overrides": {
+    "brace-expansion": "^2.0.2",
     "picomatch": "^4.0.4"
   }
 }
