@@ -26,10 +26,6 @@ jobs:
         run: |
           npm ci
 
-      - name: Pack
-        run: |
-          mkdir -p dist
-          npm pack --pack-destination dist
       - name: Release
         run: |
           npm run release
