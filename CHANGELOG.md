@@ -2,6 +2,8 @@
 
 # [2.0.0](https://github.com/Cumulocity-IoT/semantic-release-monorepo/compare/v1.2.1...v2.0.0) (2026-04-01)
 
+# [2.0.0](https://github.com/Cumulocity-IoT/semantic-release-monorepo/compare/v1.2.1...v2.0.0) (2026-04-01)
+
 ## [1.2.1](https://github.com/SoftwareAG/semantic-release-monorepo/compare/v1.2.0...v1.2.1) (2025-05-30)
 
 
